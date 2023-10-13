@@ -4,9 +4,6 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 import plotly.express as px
 import numpy as np
-import hiplot as hip
-from sklearn import datasets
-
 
 
 ######################################################################

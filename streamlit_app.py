@@ -4,6 +4,9 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 import plotly.express as px
 import numpy as np
+import hiplot as hip
+from sklearn import datasets
+
 
 
 ######################################################################
@@ -119,8 +122,15 @@ with st.expander('Data Preview'):
 ###############################
 
 ####### Data Validation #########
+col1, col2, col3 = st.columns(3)
+with col2:
+    st.markdown('# Size of data')
 fig = plt.figure(figsize=(6, 4))
-sns.histplot(df, x='target', hue='target')
+ax=fig.add_subplot(111)
+sns.histplot(df, x='target', hue='target', ax=ax)
+ax.spines['top'].set_visible(False)
+ax.spines['right'].set_visible(False)
+ax.spines['left'].set_visible(False)
 
 # st.pyplot(fig1, theme="streamlit", use_container_width=True)
 st.pyplot(fig)
@@ -129,6 +139,10 @@ st.pyplot(fig)
 
 
 ############ Histogram count ###############
+col1, col2, col3 = st.columns([0.2, 0.7, 0.1])
+with col2:
+    st.markdown('# Distribution of classes of features')
+fig = plt.figure(figsize=(6, 4))
 s = df.columns.tolist()
 s = [ele for ele in s if ele != 'target']
 # s = s.remove('target')
@@ -150,12 +164,13 @@ ax.spines['right'].set_visible(False)
 ax.spines['left'].set_visible(False)
 # ax.spines['bottom'].set_color('#DDDDDD')
 plt.xticks(rotation=45)
+plt.title(f'Percentage of classes in {option}')
 st.pyplot(fig2)
 
 ###############################
 
 #### Relative Histogram #####
-
+st.markdown('#')
 relative_histplot(df, option)
 
 
@@ -172,6 +187,7 @@ relative_histplot(df, option)
 
 
 # ######### Sunburst plot ############
+
 col1, col2, col3 = st.columns(3)
 with col1:
     s = df.columns.tolist()
@@ -221,6 +237,12 @@ with col2:
 
 
 # ####### select feature to study independently ######
+
+col1, col2, col3 = st.columns([0.2, 0.7, 0.1])
+with col2:
+    st.markdown('# Study relative statistics of a selected feature')
+    st.markdown('#')
+
 s = df.columns.tolist()
 s = [ele for ele in s if ele != 'target']
 option2 = st.selectbox(

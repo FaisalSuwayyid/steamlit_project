@@ -1,0 +1,7 @@
+pandas
+seaborn
+plotly
+matplotlib.pyplot
+hiplot
+plotly.express
+

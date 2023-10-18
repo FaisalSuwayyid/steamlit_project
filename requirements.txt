@@ -2,5 +2,5 @@ pandas
 seaborn
 plotly
 matplotlib
-PIL
+Pillow
 

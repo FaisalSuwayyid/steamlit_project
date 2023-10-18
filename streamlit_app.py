@@ -47,10 +47,10 @@ with col2:
 
 
 
-# image = Image.open('AdobeStock_321292924_Preview copy.jpg')
-# col1, col2, col3 = st.columns([0.25, 0.5, 0.25])
-# with col2:
-#     st.image(image, caption='Mushroom Anatomy')
+image = Image.open('AdobeStock_321292924_Preview copy.jpg')
+col1, col2, col3 = st.columns([0.25, 0.5, 0.25])
+with col2:
+    st.image(image, caption='Mushroom Anatomy')
 
 st.markdown('#')
 st.markdown('#')

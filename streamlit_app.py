@@ -45,9 +45,12 @@ col1, col2, col3 = st.columns([0.1, 0.89, 0.01])
 with col2:
     st.title('Classification of Mushrooms to Edible and Poisonous')
 
-image = Image.open('AdobeStock_321292924_Preview copy.jpg')
 
-st.image(image, caption='Mushroom Anatomy')
+
+# image = Image.open('AdobeStock_321292924_Preview copy.jpg')
+# col1, col2, col3 = st.columns([0.25, 0.5, 0.25])
+# with col2:
+#     st.image(image, caption='Mushroom Anatomy')
 
 st.markdown('#')
 st.markdown('#')
@@ -119,7 +122,6 @@ st.markdown('##### We investigate the histogram of each \
 col1, col2, col3 = st.columns([0.2, 0.7, 0.1])
 with col2:
     st.markdown('# The percentage of classes in features')
-fig = plt.figure(figsize=(6, 4))
 s = df.columns.tolist()
 s = [ele for ele in s if ele != 'target']
 # s = s.remove('target')
@@ -143,7 +145,9 @@ ax.spines['left'].set_visible(False)
 # ax.spines['bottom'].set_color('#DDDDDD')
 plt.xticks(rotation=45)
 plt.title(f'Percentage of classes in {option_data_histogram}')
-st.pyplot(fig2)
+col1, col2, col3 = st.columns([0.25, 0.5, 0.25])
+with col2:
+    st.pyplot(fig2)
 
 
 
@@ -432,7 +436,9 @@ ax.spines['right'].set_visible(False)
 ax.spines['left'].set_visible(False)
 # ax.spines['bottom'].set_color('#DDDDDD')
 plt.xticks(rotation=45)
-st.pyplot(fig2)
+col1, col2, col3 = st.columns([0.25, 0.5, 0.25])
+with col2:
+    st.pyplot(fig2)
 
 
 # relative_histplot(df_specific, option4)

@@ -8,7 +8,7 @@ import numpy as np
 # from sklearn import datasets
 
 
-from PIL import Image
+# from PIL import Image
 
 
 

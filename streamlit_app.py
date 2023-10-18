@@ -47,7 +47,7 @@ with col2:
 
 image = Image.open('AdobeStock_321292924_Preview copy.jpg')
 
-st.image(image, caption='Sunrise by the mountains')
+st.image(image, caption='Mushroom Anatomy')
 
 st.markdown('#')
 st.markdown('#')

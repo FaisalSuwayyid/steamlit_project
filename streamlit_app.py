@@ -45,9 +45,9 @@ col1, col2, col3 = st.columns([0.1, 0.89, 0.01])
 with col2:
     st.title('Classification of Mushrooms to Edible and Poisonous')
 
-# image = Image.open('AdobeStock_321292924_Preview copy.jpg')
+image = Image.open('AdobeStock_321292924_Preview copy.jpg')
 
-# st.image(image, caption='Sunrise by the mountains')
+st.image(image, caption='Sunrise by the mountains')
 
 st.markdown('#')
 st.markdown('#')

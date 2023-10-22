@@ -358,7 +358,7 @@ with tab4:
                  'stalk-color-above-ring', 'stalk-surface-below-ring',\
                       'veil-color', 'spore-print-color','odor' ]])
     htmlcomp = exp.to_html()
-    st.components.v1.html(htmlcomp,width=900, height=600, scrolling=True)
+    st.components.v1.html(htmlcomp,width=700, height=600, scrolling=True)
 
 
 

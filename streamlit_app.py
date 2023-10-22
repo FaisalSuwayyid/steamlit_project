@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 import plotly.express as px
 import numpy as np
 import hiplot as hip
-from streamlit_option_menu import option_menu
+
 # from sklearn import datasets
 
 

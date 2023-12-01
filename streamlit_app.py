@@ -57,8 +57,7 @@ with col2:
     with tab2:
 
         st.header("Features:")
-        image = Image.open('AdobeStock_321292924_Preview copy.jpg')
-        st.image(image, caption='Mushroom Anatomy')
+        
         st.markdown("1. cap-shape:                bell, conical, convex, flat, \
                                   knobbed, sunken.")
         st.markdown('2. cap-surface:              fibrous, grooves, scaly, smooth.')

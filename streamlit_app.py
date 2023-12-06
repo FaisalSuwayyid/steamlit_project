@@ -589,8 +589,4 @@ with tab_bio:
     st.markdown('I am currently enrolled as a doctoral philosophy student specializing in mathematics. My research focus primarily centers around the development of topological data analysis methodologies that have practical applications within the domain of molecular biology. I maintain a strong interest in diverse mathematical subjects, with a particular passion for the field of algebra.')
     st.markdown('#')
     st.markdown('#')
-    exp = hip.Experiment.from_dataframe(df[['target', 'ring-type', 'population',\
-                     'stalk-color-above-ring', 'stalk-surface-below-ring',\
-                          'veil-color', 'spore-print-color','odor' ]])
-    htmlcomp = exp.to_html()
-    st.components.v1.html(htmlcomp,width=700, height=600, scrolling=True)
+    
